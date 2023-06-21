@@ -1,0 +1,368 @@
+body{
+    background-color: #3e0646;
+}
+.header {
+    padding-top: 10px;
+    display: flex;
+    position: fixed;
+    transition: background-color .3s;
+    z-index: 10;
+    width: 100%;
+}
+
+.logo__link {
+    background: url('hbo-removebg-preview.png') no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: inline-block;
+    height: 2rem;
+    width: 5.7rem;
+}
+
+@media screen and (max-width: 1024px){
+    .logo__link {
+        height: 3.2rem;
+        width: 5.9rem;
+    }
+}
+
+.header__navigation {
+    width: 100%;
+}
+
+.header .logo {
+    margin-left: 1rem;
+    padding-top: 0.8rem;
+}
+
+@media screen and (max-width: 1024px){
+    .header .logo {
+        margin-left: 2.2rem;
+        padding-top: 2.0rem;
+    }
+}
+
+.nav-menu {
+    margin-left: 0.7rem;
+}
+
+.nav-menu__item {
+    display: inline;
+    vertical-align: top;
+}
+
+.nav-submenu__link,
+.nav-menu__link {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-menu__link {
+    padding: 1rem 0.5rem;
+}
+
+.nav-submenu__link {
+    padding: 1.6rem 2.0rem;
+}
+
+.nav-menu__text {
+    margin-left: 1.1rem;
+    font-size: 1;
+    position: relative;
+}
+
+.nav-submenu__text::before,
+.nav-menu__text::before {
+    background: #fff;
+    bottom: -.8rem;
+    content: '';
+    height: .2rem;
+    position: absolute;
+    transition: width .2s;
+    width: 0;
+}
+
+.nav-submenu__link:hover .nav-submenu__text::before,
+.nav-menu__link:hover .nav-menu__text::before {
+    width: 100%;
+}
+
+.nav-menu__item.dropdown {
+    display: none;
+}
+
+.nav-menu__item.dropdown:hover .nav-submenu {
+    display: block;
+}
+
+.nav-submenu {
+    animation:  .5s;
+    background: #141414;
+    border: .1rem solid #393939;
+    border-radius: .5rem;
+    display: none;
+    margin: -2rem;
+    padding: 0.4rem 0;
+    position: absolute;
+}
+
+.nav-submenu.active {
+    display: block;
+}
+
+.nav-submenu__text {
+    margin-left: 1.2rem;
+    position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-menu {
+        margin-left: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .nav-menu__item.mobile-hidden,
+    .nav-menu__text {
+        display: none;
+    }
+
+    .nav-menu__item.dropdown {
+        display: inline-block;
+    }
+
+    .nav-menu__link {
+        font-size: 1.6rem;
+        padding: 2.8rem 1.6rem;
+    }
+}
+
+.user-menu {
+    text-decoration: none;
+    position: fixed;
+    color: #fff;
+    top: 0;
+    right: 0;
+}
+
+.user-menu__background {
+    animation: slideDown .4s;
+    background-color: #141414;
+    border: 1px solid #393939;
+    border-radius: .5rem;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.user-menu__current-profile {
+    display: flex;
+    padding: 1.2rem 2rem;
+}
+
+.user-menu__profiles .user-menu__item {
+    text-decoration: none;
+    padding: 0.7rem 0;
+}
+
+.user-menu__options .user-menu__link {
+    color: #C3C3C3;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 1.3rem 2rem;
+}
+
+.user-menu__profiles {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: .9rem;
+    border-top: 1px solid #393939;
+}
+
+.user-menu__options {
+    list-style: none;
+
+    padding-bottom: 2.2rem;
+}
+
+.user-menu__options:hover{
+    transition: ease-in-out .2s;
+}
+
+.user-menu__link:hover {
+    color: #fff;
+    box-shadow:
+                1px 1px #141414,
+                2px 2px #141414,
+                3px 3px #141414;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.user-menu__current-profile{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+
+}
+.user-menu__profiles,
+.user-menu__options {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+}
+
+.user-menu__profiles,
+.user-menu__options {
+    animation: showFade .3s;
+}
+
+.user-menu .show-hover {
+    display: none;
+}
+
+.user-menu:hover .show-hover,
+.user-menu:hover .user-profile__title {
+    display: block;
+}
+
+.user-menu.active .show-hover,
+.user-menu.active .user-profile__title {
+    display: block;
+}
+
+@media screen and (max-width: 1024px){
+    .user-menu .user-profile__title {
+        display: none;
+    }
+    .user-menu .user-profile__avatar {
+        height: 1.5rem;
+        width: 1.6rem;
+    }
+    .user-menu__current-profile {
+        padding-top: 1.9rem;
+    }
+}
+
+
+.banners {
+    align-items: center;
+    display: flex;
+    padding-top: 9.7rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-slider {
+    display: flex;
+    position: relative;
+}
+
+.banner-slider__item {
+    flex-shrink: 0;
+    opacity: .5;
+    padding:0 1rem 3rem;
+    position: relative;
+    width: 91vw;
+}
+
+.banner-slider__item.active {
+    opacity: 1;
+}
+
+.banner-slider__link {
+    display: block;
+    position: relative;
+}
+
+.banner-slider__link::before {
+    border: .4rem solid rgba(255, 255, 255, 0);
+    border-radius: .5rem;
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: border .3s;
+}
+
+.banner-slider__link:hover::before {
+    border-color:rgba(255, 255, 255, 0.7);
+}
+
+.banner-slider__cover {
+    border-radius: .5rem;
+    box-shadow: #000 0rem 2rem 3rem -2rem;
+    display: block;
+    width: 100%;
+}
+
+.banner-slider__title {
+    animation: slideLeft 1s;
+    left: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.banner-slider__title.active {
+    display: block;
+}
+
+.banners .arrow-slider {
+    height: 100%;
+    margin-top: -3rem;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s;
+    z-index: 2;
+}
+
+.banners .arrow-slider:hover {
+    opacity: 1;
+}
+
+.banners .arrow-slider--left {
+    padding: 0 3.6rem ;
+    left: 0;
+}
+
+.banners .arrow-slider--right {
+    padding: 0 3.6rem ;
+    right: 0;
+}
+
+.banners .controls-slider {
+    bottom: 4.6rem;
+    right: 11.6rem;
+}
+
+@media screen and (max-width: 1024px){
+    .banners {
+        padding-top: 8.2rem;
+    }
+
+    .banner-slider__item {
+        width: 85vw;
+    }
+
+    .banners .arrow-slider--left {
+        padding: 0 1rem;
+        left: 0;
+    }
+    
+    .banners .arrow-slider--right {
+        padding: 0 1rem;
+        right: 0;
+    }
+
+    .banners .controls-slider {
+        bottom: 4.2rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <title>HBO Clonada</title>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="logo">
+            <a class="logo__link" href="/"></a>
+        </div>
+        <nav class="header__navigation">
+            <ul class="nav-menu">
+                <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="/">
+                        <span class="nav-menu__text">Início</span>
+                    </a>
+                </li>
+                <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="/">
+                        <span class="nav-menu__text">Pesquisa</span>
+                    </a>
+                </li>
+                <li class="nav-menu__item">
+                    <a class="nav-menu__link" href="/">
+                        <span class="nav-menu__text">Minha Lista</span>
+                    </a>
+                </li>
+                <li class="nav-menu__item mobile-hidden">
+                    <a class="nav-menu__link" href="/">
+                        <span class="nav-menu__text">Originais</span>
+                    </a>
+                </li>
+                <li class="nav-menu__item mobile-hidden">
+                    <a class="nav-menu__link" href="/">
+                        <span class="nav-menu__text">Filmes</span>
+                    </a>
+                </li>
+                <li class="nav-menu__item mobile-hidden">
+                    <a class="nav-menu__link" href="/">
+                        <span class="nav-menu__text">Séries</span>
+                    </a>
+                </li>
+                <li class="nav-menu__item dropdown">
+                    <a class="nav-menu__link" href="/" data-open-navsubmenu>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </a>
+                    <ul class="nav-submenu" data-navsubmenu>
+                        <li class="nav-submenu__item mobile-hidden">
+                            <a class="nav-submenu__link" href="/">
+                                <span class="nav-submenu__text">Originais</span>
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item mobile-hidden">
+                            <a class="nav-submenu__link" href="/">
+                                <span class="nav-submenu__text">Filmes</span>
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item mobile-hidden">
+                            <a class="nav-submenu__link" href="/">
+                                <span class="nav-submenu__text">Séries</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="user-menu" data-usermenu>
+                <div class="user-menu__background show-hover"></div>
+                <div class="user-menu__current-profile" data-open-usermenu>
+                    <div class="user-profile user-profile--reverse">
+                        <img class="user-profile__avatar" src="./assets/imgs/avatar.png" height="30" width="30" />
+                        <span class="user-profile__title">Bianca</span>
+                    </div>
+                </div>
+                <ul class="user-menu__profiles show-hover" data-usermenu="user-profiles">
+                    
+                </ul>
+                <ul class="user-menu__options show-hover">
+                    <li class="user-menu__item">
+                        <a class="user-menu__link" href="/">Editar Perfis</a>
+                    </li>
+                    <li class="user-menu__item">
+                        <a class="user-menu__link" href="/">Configurações do Aplicativo</a>
+                    </li>
+                    <li class="user-menu__item">
+                        <a class="user-menu__link" href="/">Conta</a>
+                    </li>
+                    <li class="user-menu__item">
+                        <a class="user-menu__link" href="/">Ajuda</a>
+                    </li>
+                    <li class="user-menu__item">
+                        <a class="user-menu__link" href="/">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="slide-wrapper" data-slide="wrapper">
+                <button class="slide-nav-button slide-nav-previous fas fa-chevron-left" data-slide="nav-previous-button"></button>
+                <button class="slide-nav-button slide-nav-next fas fa-chevron-right" data-slide="nav-next-button"></button>
+                <div class="slide-list" data-slide="list">
+                    <div class="slide-item" data-slide="item" data-index="0">
+                        <div class="slide-content">
+                            <img class="slide-image" src="assets/imgs/1.png" />
+                            <div class="slide-description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-item" data-slide="item" data-index="1">
+                        <div class="slide-content">
+                            <img class="slide-image" src="assets/imgs/2.png"/>
+                            <div class="slide-description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-item" data-slide="item" data-index="2">
+                        <div class="slide-content">
+                            <img class="slide-image" src="assets/imgs/3.png"/>
+                            <div class="slide-description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-item" data-slide="item" data-index="3">
+                        <div class="slide-content">
+                            <img class="slide-image" src="assets/imgs/4.png" alt="" />
+                            <div class="slide-description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-item" data-slide="item" data-index="4">
+                        <div class="slide-content">
+                            <img class="slide-image" src="assets/imgs/5.png" alt="" />
+                            <div class="slide-description">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-controls" data-slide="controls-wrapper">
+                </div>
+            </div>
+        </div>
+
+        <section class="image-content">
+
+            <h3></h3>
+
+            <div class="image-layout-item">
+                <img  src="ML.png" >
+            </div>
+    
+            <div class="image-layout-item">
+                <img  src="DL.png" >
+            </div>
+    
+            <div class="image-layout-item">
+                <img  src="DS.png" >
+            </div>
+    
+            <div class="image-layout-item">
+                <img  src="IoT.png" >
+            </div>
+            
+            <div class="image-layout-item">
+                <img  src="NN.png" >
+            </div>
+
+            <div class="image-layout-item">
+                <img  src="ML.png" >
+            </div>
+    
+            <div class="image-layout-item">
+                <img  src="DL.png" >
+            </div>
+    
+            <div class="image-layout-item">
+                <img  src="DS.png" >
+            </div>
+    
+        </section>
+
+        <script src="./assets/js/slides.js"></script>
+        <script>
+            initSlider({
+                autoPlay: true,
+                startAtIndex: 0,
+                timeInterval: 2000
+            })
+        </script>    
+</main>
+    <div id="int-message">
+    <h3>Top vídeos assistidos</h3>
+    </div>
+    <section class="video-container">
+            <div class="video-container__item">
+                <iframe width="210" height="130" src="https://www.youtube.com/embed/5b9Z8toVaAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h4>O que é ciência de dados?</h4>
+            </div>
+            
+            <div class="video-container__item">
+                <iframe width="210" height="130" src="https://www.youtube.com/embed/Iuz_jc96bQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h4>O que é machine learning?</h4>
+            </div>
+
+            <div class="video-container__item">
+                <iframe width="210" height="130" src="https://www.youtube.com/embed/kryIBKPVZ7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+                <h4>O que é deep learning?</h4>
+            </div>
+
+            <div class="video-container__item">
+                <iframe width="210" height="130" src="https://www.youtube.com/embed/-LATVnPcvHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                <h4>O que é Python?</h4>
+            </div>
+
+            <div class="video-container__item">
+                <iframe width="210" height="130" src="https://www.youtube.com/embed/1_c_MA1F-vU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h4>O que são Redes Neurais?</h4>
+            </div>
+       
+    </section>
+    <div id="int-message">
+        <h3>Minha lista</h3>
+        </div>
+    <section class="preview-content-list">
+
+        <div class="image-preview">
+            <img src="assets/imgs/encanto.jpg">
+        </div>
+
+        <div class="image-preview">
+            <img src="assets/imgs/guardioes-da-galaxia.jpg">
+        </div>
+        
+        <div class="image-preview">
+            <img src="assets/imgs/homem-formiga.jpg">
+        </div>
+        
+        <div class="image-preview">
+            <img src="assets/imgs/tudo-em-todo-lugar.jpg">
+        </div>
+        
+        <div class="image-preview">
+            <img src="assets/imgs/avengers.jpg">
+        </div>
+
+        <div class="image-preview">
+            <img src="assets/imgs/wakanda.jpg">
+        </div>
+
+        <div class="image-preview">
+            <img src="assets/imgs/mario-bros.jpg">
+        </div>
+
+
+
+    </section>
+
+    
+    <script src="assets/js/slides.js"></script>
+</body>
+</html>

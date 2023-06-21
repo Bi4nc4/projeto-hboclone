@@ -1,0 +1,207 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#logoname{
+    color: #fff;
+    font-style: bold;
+    font-size: 24px;
+    padding: 12px;
+    text-align: center;
+}
+
+body{
+    background: url(/assets/css/fundo.png) ;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+main .wrapper{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.slide-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-list {
+    display: flex;
+}
+
+.slide-item {
+    cursor: grab;
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 90vw;
+}
+
+.slide-content {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.slide-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.slide-description {
+    border-radius: 10px;
+    background: linear-gradient(to top, #000, transparent);
+    color: #fff;
+    position: absolute;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}
+
+.slide-description h3 {
+    font-family: 'Koulen', sans-serif;
+    font-size: 48px;
+    position: relative;
+    top: 16px
+}
+
+.slide-description p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+}
+
+.slide-nav-button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+}
+
+.slide-nav-previous {
+    left: 15px;
+}
+
+.slide-nav-next {
+    right: 15px;
+}
+
+.slide-controls {
+    margin: 30px auto 0;
+}
+
+.slide-control-button {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.slide-control-button.active {
+
+    color: #140320;
+}
+
+
+@media  (max-width: 678px) {
+    .image-description h3{
+        font-size: 24px;
+        top: 0;
+    }
+    .image-description p{
+        font-size: 12px;
+    }
+
+    .slide-nav-buttom{
+        font-size: 28px;
+    }
+    
+    .slide-nav-prev{
+        left: 10px;
+    }
+    .slide-nav-next{
+        right: 10px;
+    }
+
+    .slide-control-buttom{
+        font-size:14px;
+    }
+}
+
+.video-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: Arial;
+    color: aliceblue;
+
+}
+
+.image-content{
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    gap: 30px;
+    font-family: 'PT Sans', sans-serif;
+    border-radius: 50%;
+
+}
+
+.image-layout-item img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.video-container__item {
+    display: flexbox;
+    border: solid purple;
+    transition: all 0.5s ease-in;
+    align-items: center;
+    /* display: ; */
+}
+
+.video-container__item:hover {
+    transform: scale(1.1);
+}
+
+#int-message{
+    padding: 2%;
+    margin: auto;
+    font-family:Arial, sans-serif;
+    color: #fff;
+}
+
+.preview-content-list{
+    display: flex;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    gap: 10px;
+}
+
+.image-preview img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 15px;
+    height: 240px;
+    width: 182px;  
+}
+
+.image-preview:hover{
+    border: solid #fff;
+    cursor: pointer;
+}
